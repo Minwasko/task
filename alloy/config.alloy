@@ -9,11 +9,11 @@ otelcol.receiver.otlp "default" {
 }
 
 otelcol.exporter.loki "default" {
-	forward_to = [loki.write.default.receiver]
+  forward_to = [loki.write.default.receiver]
 }
 
 loki.write "default" {
-	endpoint {
-		url = "http://loki:3100/loki/api/v1/push"
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
   }
 }
